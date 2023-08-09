@@ -28,7 +28,7 @@ Ce projet WordPress a été créé pour démontrer l'utilisation de WordPress av
 git clone https://github.com/Youssefkadri05/Test-Latelier-Bedrock.git
 
 
-2. Configurez les paramètres de votre installation WordPress en renommant le fichier `.env.example` en `.env` et en ajustant les valeurs si nécessaire.
+2. Configurez les paramètres de votre installation WordPress ajustant les valeurs dans le ficiher .env.
 
 3. Activez le thème personnalisé dans l'administration WordPress.
 
