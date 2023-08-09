@@ -14,7 +14,7 @@
         <div class="logo ml-16">
             <img src="<?php echo get_field('logo_image'); ?>" alt="Logo">
         </div>
-        <nav class="menu mr-16">
+        <nav class="menu mr-16">       
     <?php
     if (has_nav_menu('menu_header')) {
         wp_nav_menu(array(
