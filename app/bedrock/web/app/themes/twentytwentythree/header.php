@@ -2,9 +2,12 @@
 <html lang="fr">
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
-    <title><?php wp_title(); ?></title>
+    <title> Acceuil</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+    
     <?php wp_head(); ?>
 </head>
 

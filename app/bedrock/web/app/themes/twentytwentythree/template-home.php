@@ -65,5 +65,43 @@ get_header();
         </div>
     </section>
 
+ <!-- Section 5 -->
+<section class="bg-black text-white mt-28 ml-28 w-5/6">
+    <div class="text-center p-24">
+        <?php
+        // Récupérer et afficher le sous-titre et le titre de la section 5.
+        echo '<h4 class="text-2xl mb-4">' . get_field("sous_titre_section5") . '</h4>';
+        echo '<h2 class="text-4xl font-bold mb-8">' . get_field("titre_section5") . '</h2>';
+        ?>
+
+        <?php
+        // Vérifier s'il y a des éléments dans le repeater field
+        if (have_rows("repeater_section5")) :
+        ?>
+            <div class="slick-carousel p-16 w-4/6 ml-40">
+                <?php while (have_rows("repeater_section5")) : the_row(); ?>
+                    <div class="px-4 mb-8">
+                        <?php
+                        // Récupérer et afficher l'image 
+                        $logo_image = get_sub_field("image_section5");
+                        if ($logo_image) :
+                        ?>
+                            <img src="<?php echo $logo_image; ?>" alt="Logo" class="mx-auto h-12">
+                        <?php endif; ?>
+                    </div>
+                <?php endwhile; ?>
+            </div>
+        <?php endif; ?>
+    </div>
+</section>
 
 </div>
+
+<!-- Inclure les scripts JavaScript nécessaires -->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/script.js"></script>
+
+</body>
+</html>
